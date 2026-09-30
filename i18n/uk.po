@@ -439,6 +439,13 @@ msgstr "Нерівна адреса 0x%08x в LWC2 з 0x%08x.\n"
 msgid "Unaligned address 0x%08x in SWC2 from 0x%08x\n"
 msgstr "Нерівна адреса 0x%08x в SWC2 з 0x%08x.\n"
 
+#: src/core/mdec.cc:682
+msgid ""
+"MDEC decode issued with no scale table uploaded. Real hardware has no "
+"default here and will decode this to flat grey; send MDEC(3) before "
+"MDEC(1).\n"
+msgstr ""
+
 #: src/core/memorycard.cc:350
 #, c-format
 msgid "The memory card %s doesn't exist - creating it\n"
@@ -4443,66 +4450,39 @@ msgid "Volume"
 msgstr "Гучність"
 
 #: src/spu/cfg.cc:75
-msgid ""
-"Attempts to make the CPU-to-SPU audio stream\n"
-"in sync, by changing its pitch. Consumes more CPU."
-msgstr ""
-"Спроба синхронізувати аудіопотік ЦП-СП\n"
-"зміною його висоти. Споживає більше ЦП."
-
-#: src/spu/cfg.cc:77
-msgid ""
-"Suspends the SPU processing during an IRQ, waiting\n"
-"for the main CPU to acknowledge it. Fixes issues\n"
-"with some games, but slows SPU processing."
-msgstr ""
-"Призупинення опрацювання СП впродовж IRQ\n"
-"очікуванням підтвердження головного ЦП.\n"
-"Виправлення проблем деяких ігор\n"
-"при сповільненні опрацювання СП."
-
-#: src/spu/cfg.cc:80
 msgid "None - fastest"
 msgstr "Не вказано - найшвидше"
 
-#: src/spu/cfg.cc:80
+#: src/spu/cfg.cc:75
 msgid "Simple interpolation"
 msgstr "Проста інтерполяція"
 
-#: src/spu/cfg.cc:81
+#: src/spu/cfg.cc:76
 msgid "Gaussian interpolation - good quality"
 msgstr "Гаусівська інтерполяція - хороша якість"
 
-#: src/spu/cfg.cc:82
+#: src/spu/cfg.cc:77
 msgid "Cubic interpolation - better treble"
 msgstr "Кубічна інтерполяція - найкращі високі частоти"
 
-#: src/spu/cfg.cc:83
+#: src/spu/cfg.cc:78
 msgid "Interpolation"
 msgstr "Інтерполяція"
 
-#: src/spu/cfg.cc:85
+#: src/spu/cfg.cc:80
 msgid "Mono"
 msgstr "Моно"
 
-#: src/spu/cfg.cc:86
+#: src/spu/cfg.cc:81
 msgid "Downmixes stereo to mono."
 msgstr "Перетворення стерео до моно."
 
-#: src/spu/cfg.cc:88
-msgid ""
-"Activates SPU IRQs based on writes to the decode/capture buffer. This option "
-"is necessary for some games."
-msgstr ""
-"Активація СП IRQ на основі запису до буфера декодування / захоплення. "
-"Необхідно для деяких ігор."
-
-#: src/spu/cfg.cc:89
+#: src/spu/cfg.cc:82
 #, fuzzy
 msgid "Speed multiplier"
 msgstr "Швидкість скалера"
 
-#: src/spu/cfg.cc:90
+#: src/spu/cfg.cc:83
 msgid ""
 "Emulation speed, applied at the audio sink (the master clock).\n"
 "1 = realtime, N = N times faster. Frames are skipped, not resampled, so "
@@ -4513,6 +4493,30 @@ msgstr ""
 #: src/spu/debug.cc:594
 msgid "SPU Debug"
 msgstr "СП-налагодження"
+
+#~ msgid ""
+#~ "Attempts to make the CPU-to-SPU audio stream\n"
+#~ "in sync, by changing its pitch. Consumes more CPU."
+#~ msgstr ""
+#~ "Спроба синхронізувати аудіопотік ЦП-СП\n"
+#~ "зміною його висоти. Споживає більше ЦП."
+
+#~ msgid ""
+#~ "Suspends the SPU processing during an IRQ, waiting\n"
+#~ "for the main CPU to acknowledge it. Fixes issues\n"
+#~ "with some games, but slows SPU processing."
+#~ msgstr ""
+#~ "Призупинення опрацювання СП впродовж IRQ\n"
+#~ "очікуванням підтвердження головного ЦП.\n"
+#~ "Виправлення проблем деяких ігор\n"
+#~ "при сповільненні опрацювання СП."
+
+#~ msgid ""
+#~ "Activates SPU IRQs based on writes to the decode/capture buffer. This "
+#~ "option is necessary for some games."
+#~ msgstr ""
+#~ "Активація СП IRQ на основі запису до буфера декодування / захоплення. "
+#~ "Необхідно для деяких ігор."
 
 #~ msgid "Reset Scaler"
 #~ msgstr "Відновити скалер"

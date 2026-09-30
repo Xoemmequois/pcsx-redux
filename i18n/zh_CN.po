@@ -442,6 +442,13 @@ msgstr "Unaligned address 0x%08x in LW from 0x%08x\n"
 msgid "Unaligned address 0x%08x in SWC2 from 0x%08x\n"
 msgstr "Unaligned address 0x%08x in SW from 0x%08x\n"
 
+#: src/core/mdec.cc:682
+msgid ""
+"MDEC decode issued with no scale table uploaded. Real hardware has no "
+"default here and will decode this to flat grey; send MDEC(3) before "
+"MDEC(1).\n"
+msgstr ""
+
 #: src/core/memorycard.cc:350
 #, c-format
 msgid "The memory card %s doesn't exist - creating it\n"
@@ -4415,63 +4422,39 @@ msgid "Volume"
 msgstr "音量"
 
 #: src/spu/cfg.cc:75
-msgid ""
-"Attempts to make the CPU-to-SPU audio stream\n"
-"in sync, by changing its pitch. Consumes more CPU."
-msgstr ""
-"尝试制作 CPU 到 SPU 的音频流同步 \n"
-"以消耗更多的CPU为代价来改变它的音调。"
-
-#: src/spu/cfg.cc:77
-msgid ""
-"Suspends the SPU processing during an IRQ, waiting\n"
-"for the main CPU to acknowledge it. Fixes issues\n"
-"with some games, but slows SPU processing."
-msgstr ""
-"在 IRQ 期间暂停 SPU 处理，等待主要 CPU 确认。 \n"
-"这会修复一些游戏的错误，但会使SPU效率变慢"
-
-#: src/spu/cfg.cc:80
 msgid "None - fastest"
 msgstr "无 - 最快"
 
-#: src/spu/cfg.cc:80
+#: src/spu/cfg.cc:75
 msgid "Simple interpolation"
 msgstr "Simple interpolation"
 
-#: src/spu/cfg.cc:81
+#: src/spu/cfg.cc:76
 msgid "Gaussian interpolation - good quality"
 msgstr "Gaussian interpolation - 最佳质量"
 
-#: src/spu/cfg.cc:82
+#: src/spu/cfg.cc:77
 msgid "Cubic interpolation - better treble"
 msgstr "Cubic interpolation - 最佳音质"
 
-#: src/spu/cfg.cc:83
+#: src/spu/cfg.cc:78
 msgid "Interpolation"
 msgstr "Interpolation"
 
-#: src/spu/cfg.cc:85
+#: src/spu/cfg.cc:80
 msgid "Mono"
 msgstr "月亮"
 
-#: src/spu/cfg.cc:86
+#: src/spu/cfg.cc:81
 msgid "Downmixes stereo to mono."
 msgstr "将立体声缩混为单声道。"
 
-#: src/spu/cfg.cc:88
-msgid ""
-"Activates SPU IRQs based on writes to the decode/capture buffer. This option "
-"is necessary for some games."
-msgstr ""
-"根据对解码/捕获缓冲区来写入激活 SPU IRQ。，此选项对于某些游戏是必需开启的。"
-
-#: src/spu/cfg.cc:89
+#: src/spu/cfg.cc:82
 #, fuzzy
 msgid "Speed multiplier"
 msgstr "Speed Scaler"
 
-#: src/spu/cfg.cc:90
+#: src/spu/cfg.cc:83
 msgid ""
 "Emulation speed, applied at the audio sink (the master clock).\n"
 "1 = realtime, N = N times faster. Frames are skipped, not resampled, so "
@@ -4482,6 +4465,28 @@ msgstr ""
 #: src/spu/debug.cc:594
 msgid "SPU Debug"
 msgstr "SPU 调试"
+
+#~ msgid ""
+#~ "Attempts to make the CPU-to-SPU audio stream\n"
+#~ "in sync, by changing its pitch. Consumes more CPU."
+#~ msgstr ""
+#~ "尝试制作 CPU 到 SPU 的音频流同步 \n"
+#~ "以消耗更多的CPU为代价来改变它的音调。"
+
+#~ msgid ""
+#~ "Suspends the SPU processing during an IRQ, waiting\n"
+#~ "for the main CPU to acknowledge it. Fixes issues\n"
+#~ "with some games, but slows SPU processing."
+#~ msgstr ""
+#~ "在 IRQ 期间暂停 SPU 处理，等待主要 CPU 确认。 \n"
+#~ "这会修复一些游戏的错误，但会使SPU效率变慢"
+
+#~ msgid ""
+#~ "Activates SPU IRQs based on writes to the decode/capture buffer. This "
+#~ "option is necessary for some games."
+#~ msgstr ""
+#~ "根据对解码/捕获缓冲区来写入激活 SPU IRQ。，此选项对于某些游戏是必需开启"
+#~ "的。"
 
 #~ msgid "Reset Scaler"
 #~ msgstr "重置 Scaler"
